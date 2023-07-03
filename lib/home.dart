@@ -12,9 +12,9 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
 
-  TextEditingController _titlecon = TextEditingController();
-  TextEditingController _subtitlecon = TextEditingController();
-  TextEditingController _daycon = TextEditingController();
+  final TextEditingController _titlecon = TextEditingController();
+  final TextEditingController _subtitlecon = TextEditingController();
+  final TextEditingController _daycon = TextEditingController();
 
   List<Todo> todos=[];
 
@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
               leading:todos[index].done ? Icon(Icons.done_rounded) : Icon(Icons.timelapse) ,
               title: Text(todos[index].title),
               subtitle: Text(todos[index].description),
-              
+
             );
       },
         separatorBuilder: (context,index){
@@ -155,11 +155,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               const SizedBox(height: 16.0),
-              Text('Title: ${todo.title}'),
+              Text('Name: ${todo.title}'),
               const SizedBox(height: 8.0),
-              Text('Description: ${todo.description}'),
+              Text('Emai: ${todo.description}'),
               const SizedBox(height: 8.0),
-              Text('Days Required: ${todo.time}'),
+              Text('Phone Number: ${todo.time}'),
               const SizedBox(height: 16.0),
               ElevatedButton(
                 onPressed: () {
